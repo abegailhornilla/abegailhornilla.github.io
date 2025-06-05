@@ -1,0 +1,296 @@
+/* Custom CSS Variables */
+:root {
+    --primary: #2563eb;
+    --primary-light: #eff6ff;
+    --secondary: #64748b;
+    --success: #22c55e;
+    --purple: #7c3aed;
+    --orange: #f97316;
+}
+
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 76px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Sections */
+.py-6 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .py-6 {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+#about .card-body p {
+    font-size: 0.8rem; /* Change this value as you like */
+}
+#about .h4.fw-bold {
+    font-family: 'impact', sans-serif; /* Change to your preferred font */
+}
+.section-title {
+    font-family: 'impact', sans-serif; /* Change to your preferred font */
+    /* Optional: font-size, font-weight, etc. */
+}
+/* Adjust navbar brand (header) font size and weight */
+.navbar-brand .fw-bold {
+    font-size: 1rem;   /* Change this value as you like (e.g., 2rem for bigger, 1.2rem for smaller) */
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700;    /* Optional: adjust weight */
+    letter-spacing: 0.5px; /* Optional: spacing */
+}
+
+.navbar {
+    min-height: 60px; /* Adjust header height */
+    /* You can increase or decrease this value */
+}
+.navbar-brand .fw-bold {
+    font-size: 2.1rem;
+    font-family: 'impact', sans-serif; /* Change to your preferred font */
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: #000000a8;
+}
+/* Navbar */
+.navbar {
+    transition: all 0.1s ease;
+}
+
+.navbar.scrolled {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(206, 206, 206, 0.888);
+}
+.navbar .nav-link {
+    font-size: 0.85rem; /* Slightly smaller font */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px; /* Adjust if your navbar height changes */
+}
+
+.active-nav-box {
+    border: 1px solid var(--secondary);
+    background: rgba(220, 220, 224, 0.593); /* more transparent */
+    border-radius: 1.1rem;
+    box-shadow: 0 1px 10px 0 rgba(164, 165, 169, 0.749);
+    transition: background 0.2s, box-shadow 0.1s, border 0.1s;
+}
+
+/* Hero Section */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, var(--primary-light), #f8fafc);
+    z-index: -1;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+}
+
+.hero-image-container::before,
+.hero-image-container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.hero-image-container::before {
+    background-color: var(--primary);
+    opacity: 0.1;
+    transform: translate(-12px, -12px);
+}
+
+.hero-image-container::after {
+    background-color: var(--primary);
+    opacity: 0.1;
+    transform: translate(12px, 12px);
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Scroll Down */
+.scroll-down {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Progress Bars */
+.progress {
+    height: 0.2rem;
+    background-color: #b8bfc8;
+}
+
+.progress-bar {
+    background-color: var(--success);
+    transition: width 1.5s ease-in-out;
+}
+
+.skill-card {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.progress-card {
+    margin: 11rem 0; /* 2rem top and bottom, 0 left and right */
+}
+
+/* Service Cards */
+.service-card {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+/* Portfolio */
+.portfolio-item {
+    cursor: pointer;
+}
+
+.portfolio-item .card {
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item .card:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item img {
+    height: 240px;
+    object-fit: cover;
+}
+
+/* Contact Links */
+.hover-primary:hover {
+    color: var(--primary) !important;
+}
+
+/* Custom Colors */
+.text-purple {
+    color: var(--purple);
+}
+
+.text-orange {
+    color: var(--orange);
+}
+
+.bg-purple {
+    background-color: var(--purple);
+}
+
+.bg-orange {
+    background-color: var(--orange);
+}
+
+.h5.fw-bold.text-primary {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Or your preferred font */
+}
+.h4.fw-bold.mb-4.text-left {
+    font-family: 'impact', sans-serif; /* Change to your preferred font */
+    font-weight: 700; /* Optional: adjust weight */
+    letter-spacing: 0.5px; /* Optional: spacing */
+    color: #00000098;
+}
+/* Animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+footer .text-muted {
+    color: #777575b5 !important; /* Replace with your preferred color */
+} 
+.cert-img-border {
+    border: 3px solid #2563eb;
+    border-radius: 1.25rem;
+    padding: 8px;
+    background: #fff;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.07);
+}
+
+.cert-card {
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.cert-card:hover {
+    box-shadow: 0 8px 32px rgba(37,99,235,0.13);
+    transform: translateY(-6px) scale(1.03);
+}
+
+#certCardsContainer {
+    position: relative;
+    min-height: 420px;
+}
+.cert-slide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+.cert-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+    z-index: 1;
+}
+.cert-dot-container {
+    margin-bottom: 2rem; /* adjust as needed */
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-image-container {
+        width: 280px;
+        height: 280px;
+        margin-top: 2rem;
+    }
+}
